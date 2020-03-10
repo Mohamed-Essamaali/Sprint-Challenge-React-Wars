@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const starWars = (props)=>{
+const StarWars = (props)=>{
 
-
+console.log("props" ,props)
 
     return(
         <div className= "starWars_container">
@@ -13,9 +13,9 @@ const starWars = (props)=>{
         <p>{props.results.hair_color}</p>
         <p>{props.results.skin_color}</p>
         <p>{props.results.eye_color}</p>
-        <p>{props.resultsbirth_year}</p>
+        <p>{props.results.birth_year}</p>
         <p>{props.results.gender}</p>
-        <p>{props.results.homeworld}</p>
+        
        
 
         </div>
@@ -23,4 +23,4 @@ const starWars = (props)=>{
     )
 
 }
-export default starWars;
+export default StarWars;

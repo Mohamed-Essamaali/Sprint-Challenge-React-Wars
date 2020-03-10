@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 
-import starWars from './components/starWars';
+import StarWars from './components/StarWars';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -17,7 +17,7 @@ useEffect(()=>{
     axios
     .get("https://swapi.co/api/people/")
     .then(res =>{
-      console.log("success here is the response ", res.data.results);
+      console.log("success here is the response ", res);
       return setResult(res.data.results);
     })
     .catch(err=>{
@@ -30,11 +30,14 @@ useEffect(()=>{
     <div className="App">
       <h1 className="Header">React Wars</h1>
       <div>
-        {result.map((e) =>{
-        return <starWars result = {e}/>
-      })}
-        
-      
+          {/* {result.map(e =>{
+        return( <starWars result = {e} />)}) */}
+
+        {result.map(e=>{
+            return <StarWars  results = {e}/>
+          
+        })}
+          
       </div>
     </div>
   );
