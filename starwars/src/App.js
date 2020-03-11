@@ -1,8 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 
 import StarWars from './components/StarWars';
+
+
+
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -29,15 +33,48 @@ useEffect(()=>{
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <div>
-          {/* {result.map(e =>{
-        return( <starWars result = {e} />)}) */}
+      <div className = "container">
 
-        {result.map(e=>{
-            return <StarWars  results = {e}/>
+        <div className= "container-items">
+          <h4>Name</h4>
+          {result.map(e=>{
+            return <StarWars  results = {e.name}/>
           
-        })}
+          })}
+         </div> 
+         <div className= "container-items">
+         <h4>Height</h4>
+          {result.map(e=>{
+            return <StarWars  results = {e.height}/>
           
+          })}
+         </div> 
+
+         <div className= "container-items">
+         <h4>Mass</h4>
+          {result.map(e=>{
+            return <StarWars  results = {e.mass}/>
+          
+          })}
+         </div> 
+         <div className= "container-items">
+         <h4>D.O.B</h4>
+          {result.map(e=>{
+            return <StarWars  results = {e.birth_year}/>
+          
+          })}
+         </div> 
+
+         <div className= "container-items">
+         <h4>Gender</h4>
+          {result.map(e=>{
+            return <StarWars  results = {e.gender}/>
+          
+          })}
+         </div> 
+         
+
+
       </div>
     </div>
   );
