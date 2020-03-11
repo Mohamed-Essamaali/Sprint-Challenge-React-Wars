@@ -36,42 +36,18 @@ useEffect(()=>{
       <div className = "container">
 
         <div className= "container-items">
-          <h4>Name</h4>
+          
           {result.map(e=>{
-            return <StarWars  results = {e.name}/>
+            return <StarWars  results = {e}/>
           
           })}
          </div> 
-         <div className= "container-items">
-         <h4>Height</h4>
-          {result.map(e=>{
-            return <StarWars  results = {e.height}/>
-          
-          })}
-         </div> 
+         
 
-         <div className= "container-items">
-         <h4>Mass</h4>
-          {result.map(e=>{
-            return <StarWars  results = {e.mass}/>
-          
-          })}
-         </div> 
-         <div className= "container-items">
-         <h4>D.O.B</h4>
-          {result.map(e=>{
-            return <StarWars  results = {e.birth_year}/>
-          
-          })}
-         </div> 
+         
+        
 
-         <div className= "container-items">
-         <h4>Gender</h4>
-          {result.map(e=>{
-            return <StarWars  results = {e.gender}/>
-          
-          })}
-         </div> 
+        
          
 
 

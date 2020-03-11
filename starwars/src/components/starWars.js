@@ -6,13 +6,13 @@ const StarWars = (props)=>{
 console.log("props" ,props)
 
     return(
-        <div className= "starWars_container">
+        <div className= "container">
             
-        <p>{props.results}</p>
-        <p>{props.results}</p>
-        <p>{props.results}</p>  
-        <p>{props.results}</p>
-        <p>{props.results}</p>
+        <p className = "container-items">{props.results.name}</p>
+        <p className = "container-items">{props.results.height}</p>
+        <p className = "container-items">{props.results.mass}</p>  
+        <p className = "container-items">{props.results.birth_year}</p>
+        <p className = "container-items">{props.results.gender}</p>
         
        
 
