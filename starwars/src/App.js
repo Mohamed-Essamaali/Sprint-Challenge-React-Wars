@@ -4,6 +4,7 @@ import './App.css';
 import axios from 'axios';
 
 import StarWars from './components/StarWars';
+import Header from './components/Header';
 
 
 
@@ -21,7 +22,7 @@ useEffect(()=>{
     axios
     .get("https://swapi.py4e.com/api/people/")
     .then(res =>{
-      console.log("success here is the response ", res.data);
+      console.log("success here is the data ", res.data.results);
       return setCharacter(res.data.results);
     })
     .catch(err=>{
@@ -38,15 +39,10 @@ useEffect(()=>{
       
 
         <div className= "container-items">
-          <div className='container-heading'>
-          <h4 className='container-items'>Name:</h4>
-           <h4 className='container-items'>Height:</h4> 
-           <h4 className='container-items'>Mass:</h4>
-           <h4 className='container-items'>Year_Birth:</h4> 
-           <h4 className='container-items'>Gender:</h4>
-          </div>
+          
+          <Header/>
           {character.map(e=>{
-            return <StarWars  results = {e}/>
+            return <StarWars  results = {e} />
           
           })}
          </div> 

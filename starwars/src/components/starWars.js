@@ -13,6 +13,8 @@ console.log("props" ,props)
         <p className = "container-items">{props.results.mass}</p>  
         <p className = "container-items">{props.results.birth_year}</p>
         <p className = "container-items">{props.results.gender}</p>
+        <p className = "container-items">{props.results.created}</p>
+   
         
        
 
